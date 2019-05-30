@@ -1,0 +1,42 @@
+{
+  "name": "react-static-example-basic",
+  "private": true,
+  "scripts": {
+    "lint:js": "eslint --ext '.jsx,.js' --ignore-path .gitignore .",
+    "lint:scss": "stylelint 'src/**/*.scss' --syntax=scss",
+    "lint:json": "prettier -l --config package.json  --ignore-path .gitignore '**/*.json'",
+    "lint": "yarn run lint:json && yarn run lint:js",
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "analyze": "react-static build --analyze",
+    "serve": "serve dist -p 3000"
+  },
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "axios": "^0.18.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-static": "^7.0.0",
+    "react-static-plugin-reach-router": "^7.0.0",
+    "react-static-plugin-sitemap": "^7.0.0",
+    "react-static-plugin-source-filesystem": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsx": "^0.0.2",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "prettier": "^1.17.1",
+    "serve": "10.1.2"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "extends": ["airbnb", "plugin:jest/recommended", "prettier"],
+  "root": true,
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["jest", "prettier"],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.spec.{js,jsx}",
+          "**/*.stories.{js,jsx}",
+          "**/factories/*.{js,jsx}",
+          "config/**/*.js",
+          "features/**/*.js",
+          "src/setupTests.js",
+          "server.js"
+        ]
+      }
+    ],
+    "prettier/prettier": "error",
+    "react/destructuring-assignment": [
+      "off",
+      "-> This rule is too coarse. e.g. destructuring + renaming, or for a single use are not an improvement"
+    ],
+    "react/jsx-one-expression-per-line": ["off", "-> prettier"],
+    "react/jsx-wrap-multilines": ["off", "-> prettier"],
+    "jsx-a11y/label-has-for": [
+      "off",
+      "This rule seems broken. It is deprecated."
+    ],
+    "jsx-a11y/tabindex-no-positive": "warn",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": false,
+        "avoidEscape": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
