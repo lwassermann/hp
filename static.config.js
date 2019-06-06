@@ -3,7 +3,6 @@ import path from 'path';
 
 export default {
   siteRoot: 'https://wassermann.xyz',
-  basePath: 'hp',
   plugins: [
     [
       require.resolve('react-static-plugin-source-filesystem'),
