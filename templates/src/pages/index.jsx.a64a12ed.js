@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{50:function(e,n,t){"use strict";t.r(n);var a=t(0),c=t.n(a);n.default=function(){return c.a.createElement("div",{style:{textAlign:"center"}},c.a.createElement("h1",null,"Welcome to the Wassermann domain"))}}}]);
